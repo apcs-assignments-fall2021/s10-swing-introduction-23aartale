@@ -23,6 +23,12 @@ public class AnimalChooser {
         JButton button1 = new JButton("Red Panda");
         frame.add(button1, BorderLayout.SOUTH);
 
+        JButton button2 = new JButton("Seal");
+        frame.add(button2, BorderLayout.WEST);
+
+        JButton button3 = new JButton("Dog");
+        frame.add(button3, BorderLayout.EAST);
+
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae) {
                 ImageIcon icon = new ImageIcon("images/red_panda.jpg");
@@ -30,8 +36,22 @@ public class AnimalChooser {
             }
         });
 
+        button2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/seal.jpg");
+                label1.setIcon(icon);
+            }
+        });
+
+        button3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+                ImageIcon icon = new ImageIcon("images/Dog.jpg");
+                label1.setIcon(icon);
+            }
+        });
+
         // 4. Size the frame.
-        frame.setSize(900, 500);
+        frame.setSize(900, 900);
 
         // 5. Show the frame
         frame.setVisible(true);
